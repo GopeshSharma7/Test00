@@ -3,12 +3,12 @@ kind: Service
 metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"nginx"},"name":"nginx-service-test1","namespace":"default"},"spec":{"ports":[{"name":"http","port":900,"protocol":"TCP","targetPort":30}],"selector":{"app":"nginx"}}}
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"nginx"},"name":"nginx-service-test1","namespace":"default"},"spec":{"ports":[{"name":"http","port":700,"protocol":"TCP","targetPort":80}],"selector":{"app":"nginx"}}}
   creationTimestamp: "2024-01-31T11:10:17Z"
   labels:
     app: nginx
     author: minikube-user
-    operation: CREATE
+    operation: UPDATE
   name: nginx-service-test1
   namespace: default
 spec:
@@ -21,9 +21,9 @@ spec:
   ipFamilyPolicy: SingleStack
   ports:
   - name: http
-    port: 900
+    port: 700
     protocol: TCP
-    targetPort: 30
+    targetPort: 80
   selector:
     app: nginx
   sessionAffinity: None
